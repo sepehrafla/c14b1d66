@@ -7,10 +7,10 @@
   "author": "",
   "license": "",
   "private": false,
-  "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
-  },
+"scripts": {
+  "build": "webpack --mode production",
+  "start": "webpack-dev-server --mode development"
+},
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
