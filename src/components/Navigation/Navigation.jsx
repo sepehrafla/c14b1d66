@@ -1,5 +1,7 @@
 import React from 'react';
 import './Navigation.css';
+import { faPhone, faCog } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navigation = ({ activeTab, onTabChange }) => {
   return (

@@ -78,27 +78,7 @@ const CallDetail = ({ call, onArchiveCall, onUnarchiveCall, onBack }) => {
         </div>
       </div>
       
-      <div style={{padding: '0 16px 16px'}}>
-        <button 
-          className="archive-call-button" 
-          onClick={() => call.is_archived ? onUnarchiveCall(call.id) : onArchiveCall(call.id)}
-          style={{
-            width: '100%',
-            background: 'white',
-            color: '#4CAF50',
-            border: '1px solid rgba(0,0,0,0.08)',
-            borderRadius: '10px',
-            padding: '16px',
-            fontSize: '16px',
-            fontWeight: '600',
-            marginTop: '24px',
-            cursor: 'pointer',
-            boxShadow: '0 1px 2px rgba(0,0,0,0.05)'
-          }}
-        >
-          {call.is_archived ? 'Unarchive Call' : 'Archive Call'}
-        </button>
-      </div>
+      {/* Archive/Unarchive button removed */}
     </div>
   );
 };
