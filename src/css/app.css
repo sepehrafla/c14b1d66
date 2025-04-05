@@ -1,0 +1,326 @@
+/* Mobile-first base styles - these will work well in React Native */
+#app {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Apply container size constraints only on larger screens */
+@media (min-width: 420px) {
+  #app {
+    max-width: 376px;
+    height: 700px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 20px auto;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.fixed-header {
+  background: white;
+  z-index: 15;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.archive-button-container {
+  display: none; /* Hide this since we moved functionality to ActivityFeed */
+}
+
+.action-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #f8f9fa;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button svg {
+  color: #555;
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.app {
+  max-width: 376px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  border-radius: 50%;
+  border-top-color: #4CAF50;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  height: 100%;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.empty-message {
+  font-size: 14px;
+  color: #666;
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.calls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.call-item {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.archive-button-container {
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.archive-all-button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f8f9fa;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+}
+
+.unarchive-all-button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f8f9fa;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+}
+
+.unarchive-all-button svg {
+  color: #FF9800;
+}
+
+.reset-all-button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f8f9fa;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+}
+
+.reset-all-button svg {
+  color: #2196F3;
+}
+
+/* App header - avoid fixed heights for React Native compatibility */
+.app-header {
+  background: white;
+  z-index: 10;
+}
+
+/* Loading styles - keep simple for React Native compatibility */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  border-radius: 50%;
+  border-top-color: #4CAF50;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+.loading-text {
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer */
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  background: white;
+}
+
+/* Add a content wrapper to organize content */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add these styles to app.css */
+.call-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.detail-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: white;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  color: #4CAF50;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding-left: 8px;
+}
+
+.detail-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+

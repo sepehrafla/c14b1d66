@@ -1,0 +1,231 @@
+.call-detail {
+  padding: 20px;
+  background: white;
+  height: 100%;
+}
+
+.call-detail * {
+  border-bottom: none !important;
+}
+
+.detail-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+.back-button {
+  position: absolute !important;
+  left: 0 !important;
+  background: none !important;
+  border: none !important;
+  color: #4CAF50 !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  padding-left: 8px !important;
+}
+
+.back-button span {
+  margin-left: -10px !important;
+}
+
+.detail-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.call-info-container {
+  padding: 16px;
+  background: white;
+}
+
+.call-info-box {
+  background: #f8f9fa !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-top: 16px !important;
+  border: none !important;
+}
+
+.call-detail-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 16px 0 !important;
+  border-bottom: none !important;
+}
+
+.call-detail-item:after,
+.call-detail-item:before,
+.call-info-box:after,
+.call-info-box:before {
+  border: none !important;
+  content: none !important;
+}
+
+.call-detail-item:not(:last-child) {
+  border-bottom: none;
+}
+
+.call-detail-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.call-detail-value {
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+}
+
+.archive-call-button {
+  width: 100%;
+  background: white;
+  color: #4CAF50;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 24px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.call-icon.large {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.call-icon.large.missed {
+  background: #FF5252;
+}
+
+.call-icon.large.voicemail {
+  background: #2196F3;
+}
+
+.call-icon.large.inbound.answered {
+  background: #4CAF50;
+}
+
+.call-icon.large.outbound {
+  background: #FF9800;
+}
+
+.call-type-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.call-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.call-date-time {
+  font-size: 14px;
+  color: #999;
+}
+
+.detail-info {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: none;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 14px;
+}
+
+.info-value {
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+.detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.archive-button,
+.call-back-button {
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.archive-button {
+  background: #f8f9fa;
+  color: #4CAF50;
+  border: none;
+}
+
+.archive-button.unarchive {
+  color: #FF9800;
+}
+
+.archive-button:hover {
+  background: #f0f0f0;
+}
+
+.call-back-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.call-back-button:hover {
+  background: #3b9f3b;
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+.call-info-container div,
+.call-info-container span,
+.call-info-box div,
+.call-info-box span {
+  border-bottom: none !important;
+} 

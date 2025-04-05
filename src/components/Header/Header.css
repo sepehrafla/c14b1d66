@@ -1,0 +1,149 @@
+.header {
+  background: white;
+  z-index: 20;
+  position: relative;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  max-width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.25);
+  flex-shrink: 0;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #333, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tab-bar {
+  display: flex;
+  flex-grow: 1;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 4px;
+  height: 44px;
+}
+
+.tab {
+  flex: 1;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition: color 0.2s, background-color 0.2s;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab.active {
+  color: #4CAF50;
+  font-weight: 600;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.tab.active::after {
+  display: none;
+}
+
+.header-action {
+  width: 100%;
+  padding: 0 16px 16px;
+  background-color: white;
+}
+
+.action-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #f8f9fa;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background: #f0f0f0;
+}
+
+.action-button svg {
+  color: #666;
+}
+
+/* Detail header styles */
+.detail-header {
+  padding: 16px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header-detail {
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.back-icon {
+  font-size: 20px;
+  color: #4CAF50;
+}
+
+.detail-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+} 

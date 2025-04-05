@@ -1,0 +1,59 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+
+module.exports = {
+  entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.js'
+  ],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
+        ]
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    port: 8080,
+    hot: true,
+    open: true
+  }
+};
